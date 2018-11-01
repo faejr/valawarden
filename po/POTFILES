@@ -1,0 +1,10 @@
+src/dialogs/LoginDialog.vala
+src/Api.vala
+src/models/Cipher.vala
+src/views/AppView.vala
+src/widgets/CipherPage.vala
+src/widgets/Sidebar.vala
+src/widgets/CipherItem.vala
+src/widgets/CipherList.vala
+src/widgets/AlignedLabel.vala
+src/widgets/EntryWithLabel.vala
