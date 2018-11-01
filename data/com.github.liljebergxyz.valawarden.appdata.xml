@@ -16,12 +16,12 @@
         </screenshot>
     </screenshots>
     <description>
-        <p></p>
+        <p>Unofficial native Bitwarden client</p>
     </description>  
     <releases>
-      <release version="1.0.0" date="2018-06-04">
+      <release version="0.1.0" date="2018-06-04">
         <description>
-          <p>Initial 1.0.0 release!</p>
+          <p>Initial 0.1.0 release!</p>
         </description>
       </release>
     </releases>
