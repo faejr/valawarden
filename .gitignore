@@ -1,0 +1,7 @@
+build/*
+debian/build/*
+debian/com.github.liljebergxyz.valawarden.debhelper.log
+debian/com.github.liljebergxyz.valawarden.substvars
+debian/com.github.liljebergxyz.valawarden/
+debian/debhelper-build-stamp
+debian/files

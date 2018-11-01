@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Valawarden
+Comment=Unofficial bitwarden client
+Icon=com.github.liljebergxyz.valawarden
+Exec=com.github.liljebergxyz.valawarden
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;
+Keywords=app;vala;

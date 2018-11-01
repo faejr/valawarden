@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.liljebergxyz.valawarden package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.liljebergxyz.valawarden\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-28 13:28+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/dialogs/LoginDialog.vala:28 src/dialogs/LoginDialog.vala:54
+msgid "Login"
+msgstr ""
+
+#: src/dialogs/LoginDialog.vala:51
+msgid "OTP Code:"
+msgstr ""
+
+#: src/dialogs/LoginDialog.vala:65
+msgid "Base url:"
+msgstr ""
+
+#: src/dialogs/LoginDialog.vala:67
+msgid "Email:"
+msgstr ""
+
+#: src/dialogs/LoginDialog.vala:69 src/views/AppView.vala:65
+msgid "Password:"
+msgstr ""
+
+#: src/dialogs/LoginDialog.vala:111
+msgid "Invalid username or password"
+msgstr ""
+
+#: src/Api.vala:61
+msgid "No supported two factor provider found"
+msgstr ""
+
+#: src/views/AppView.vala:56
+msgid "Unlock"
+msgstr ""
+
+#: src/widgets/CipherPage.vala:27
+msgid "Name"
+msgstr ""
+
+#: src/widgets/CipherPage.vala:29
+msgid "Username"
+msgstr ""
+
+#: src/widgets/CipherPage.vala:38
+msgid "Password"
+msgstr ""
+
+#: src/widgets/Sidebar.vala:12
+msgid "Folders"
+msgstr ""
