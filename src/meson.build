@@ -26,7 +26,7 @@ sources += files(
 
     'models/Totp.vala',
     'models/Crypto.vala',
-    'models/Api.vala',
+    'models/Bitwarden.vala',
     'models/LibUUID.vala',
     'Application.vala',
     'Main.vala',

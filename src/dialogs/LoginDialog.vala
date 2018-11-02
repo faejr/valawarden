@@ -91,12 +91,12 @@ namespace App.Dialogs {
             string email = email_entry.text;
             string password = password_entry.text;
 
-            var api = App.Api.get_instance ();
+            var bitwarden = App.Bitwarden.get_instance ();
             App.Models.ErrorObject result;
             if (two_factor_entry.text != "") {
-                result = api.login (email, password, 0, two_factor_entry.text);
+                result = bitwarden.login (email, password, 0, two_factor_entry.text);
             } else {
-                result = api.login (email, password);
+                result = bitwarden.login (email, password);
             }
             if (result.error != null) {
                 error_label.label = _ (result.error_description);
@@ -115,7 +115,7 @@ namespace App.Dialogs {
                 }
                 stdout.printf ("%s\n".printf (result.error));
             } else {
-                App.Api.get_instance ().sync ();
+                App.Bitwarden.get_instance ().sync ();
                 error_label.hide ();
                 main_window.show_all ();
                 app_view.activate ();
