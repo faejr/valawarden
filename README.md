@@ -20,6 +20,9 @@
   <a href="https://github.com/liljebergxyz/valawarden/releases">
     <img src="https://img.shields.io/badge/Release-v%200.1.0-orange.svg">
   </a>
+  <a href="https://travis-ci.com/LiljebergXYZ/valawarden">
+    <img src="https://travis-ci.com/LiljebergXYZ/valawarden.svg?branch=develop" alt="Build Status">
+  </a>
 </p>
 
 <p align="center">
