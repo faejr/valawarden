@@ -27,6 +27,7 @@
 
 <p align="center">
   <img src="https://github.com/LiljebergXYZ/valawarden/raw/develop/data/images/com.github.liljebergxyz.valawarden.png" alt="Icon" />
+  <br />
   <a href="https://github.com/liljebergxyz/valawarden/issues/new"> Report a problem! </a>
 </p>
 
