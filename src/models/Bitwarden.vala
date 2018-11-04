@@ -42,7 +42,7 @@ namespace App {
             var parser = make_request (message);
 
             var root_object = parser.get_root ().get_object ();
-            ErrorObject error_object = check_login_response(root_object);
+            ErrorObject error_object = check_login_response (root_object);
             if (error_object.error != "") {
                 return error_object;
             }
@@ -62,7 +62,7 @@ namespace App {
             return error_object;
         }
 
-        private ErrorObject check_login_response(Json.Object root_object) {
+        private ErrorObject check_login_response (Json.Object root_object) {
             var error_object = new ErrorObject ();
             var error = root_object.get_string_member ("error");
             if (error != null) {
@@ -83,10 +83,10 @@ namespace App {
                         error_object.error_description = _ ("No supported two factor provider found");
                     }
                 }
-                
+
                 return error_object;
             }
-            
+
             return error_object;
         }
 

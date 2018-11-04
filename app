@@ -87,6 +87,9 @@ case $1 in
     test
     ./com.github.liljebergxyz.valawarden "${@:2}"
     ;;
+"beautify")
+    uncrustify -c uncrustify.cfg --no-backup --replace src/**/*.vala
+    ;;
 "uninstall")
     initialize
     sudo ninja uninstall

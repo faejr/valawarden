@@ -24,7 +24,7 @@ namespace App.Widgets {
             listbox.activate_on_single_click = false;
             listbox.set_size_request (200, 100);
             // TODO: Filter
-            //listbox.set_filter_func
+            // listbox.set_filter_func
 
             scroll_box.set_size_request (200, 100);
             scroll_box.add (listbox);

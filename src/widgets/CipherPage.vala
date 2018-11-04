@@ -74,7 +74,7 @@ namespace App.Widgets {
             });
 
             otp_panel = new OTPPanel ();
-            otp_panel.hide();
+            otp_panel.hide ();
 
             user_grid.attach (cipher_header, 0, 0, 1, 1);
             user_grid.attach (entry_grid, 0, 1, 1, 1);
@@ -96,10 +96,10 @@ namespace App.Widgets {
             password_entry.entry.set_visibility (false);
             totp_entry.text = cipher.totp != null ? cipher.totp : "";
             if (cipher.totp != null) {
-                otp_panel.set_key(cipher.totp);
-                otp_panel.show();
+                otp_panel.set_key (cipher.totp);
+                otp_panel.show ();
             } else {
-                otp_panel.hide();
+                otp_panel.hide ();
             }
         }
 

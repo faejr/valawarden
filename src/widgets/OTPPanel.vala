@@ -19,15 +19,15 @@ namespace App.Widgets {
             margin_top = 14;
 
             timestep = 30;
-            GLib.Timeout.add_seconds(1, timer);
+            GLib.Timeout.add_seconds (1, timer);
 
-            code_label = new AlignedLabel("", Gtk.Align.START);
+            code_label = new AlignedLabel ("", Gtk.Align.START);
             code_label.get_style_context ().add_class ("code-label");
 
-            progressBar = new CircularProgressBar();
+            progressBar = new CircularProgressBar ();
             progressBar.line_width = 2;
             progressBar.max_value = timestep;
-            progressBar.percentage = 1.0 - ((timePassed % timestep) * (1.0/(double)timestep));
+            progressBar.percentage = 1.0 - ((timePassed % timestep) * (1.0 / (double) timestep));
             progressBar.width_request = 25;
             progressBar.height_request = 25;
 
@@ -38,16 +38,16 @@ namespace App.Widgets {
         private bool timer () {
             timePassed = GLib.get_real_time () / Totp.MICROSECONDS_TO_SECONDS;
             if (timePassed % timestep == 0) {
-                code_label.label = totp.generate();
+                code_label.label = totp.generate ();
             }
-            progressBar.percentage = 1.0 - ((timePassed % timestep) * (1.0/(double)timestep));
+            progressBar.percentage = 1.0 - ((timePassed % timestep) * (1.0 / (double) timestep));
 
             return true;
         }
 
         public void set_key (string key) {
-            totp = new Totp(key);
-            code_label.label = totp.generate();
+            totp = new Totp (key);
+            code_label.label = totp.generate ();
         }
     }
 }
