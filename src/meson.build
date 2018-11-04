@@ -13,6 +13,10 @@ sources += files(
 
     'views/AppView.vala',
 
+    'utils/NetworkUtils.vala',
+    'utils/Crypto.vala',
+    'utils/IO.vala',
+
     'widgets/AlignedLabel.vala',
     'widgets/EntryWithLabel.vala',
     'widgets/HeaderBar.vala',
@@ -25,7 +29,6 @@ sources += files(
     'widgets/CircularProgressBar.vala',
 
     'models/Totp.vala',
-    'models/Crypto.vala',
     'models/Bitwarden.vala',
     'models/LibUUID.vala',
     'Application.vala',
