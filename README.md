@@ -1,4 +1,4 @@
-![img](https://github.com/richardbmx/valawarden/blob/develop/logotype96.png?raw=true)
+![Logo](logotype96.png)
 
 *(This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor 8bit Solutions LLC.)*
 
@@ -27,8 +27,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://github.com/LiljebergXYZ/valawarden/raw/develop/data/images/com.github.liljebergxyz.valawarden.png" alt="Icon" />
   <br />
   <a href="https://github.com/liljebergxyz/valawarden/issues/new"> Report a problem! </a>
 </p>
