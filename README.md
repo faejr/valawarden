@@ -1,3 +1,5 @@
+![img](https://github.com/richardbmx/valawarden/blob/develop/logotype96.png?raw=true)
+
 *(This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor 8bit Solutions LLC.)*
 
 <div align="center">
