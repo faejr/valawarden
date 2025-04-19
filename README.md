@@ -1,5 +1,7 @@
 *(This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor 8bit Solutions LLC.)*
 
+![Icon](data/images/com.github.liljebergxyz.valawarden.png)
+
 <div align="center">
   <h1 align="center">Valawarden</h1>
   <h3 align="center">Unofficial native bitwarden client for elementary OS</h3>
@@ -76,6 +78,7 @@ Options:
   run               Builds and runs the application
   test              Builds and runs testing for the application
   test-run          Builds application, runs testing and if successful application is started
+  beautify          Beautify code using uncrustify
   uninstall         Removes the application from the system (requires sudo)
 ```
 

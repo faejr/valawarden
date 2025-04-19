@@ -19,7 +19,7 @@ namespace App {
             checksumType = checksum;
         }
 
-        public void set_key(string key) {
+        public void set_key (string key) {
             secret = base32_decode (key);
         }
 
