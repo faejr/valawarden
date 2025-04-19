@@ -6,13 +6,13 @@ using GCrypt;
 namespace App {
     public class Bitwarden {
         private const int TOTP_TFA_ID = 0;
-        private Soup.SessionAsync session;
+        private Soup.Session session;
         private string valawarden_dir;
         private string sync_data_file = "sync-data.json";
         public uint8[] encryption_key;
 
         public Bitwarden () {
-            session = new Soup.SessionAsync ();
+            session = new Soup.Session ();
             session.user_agent = "%s/%s".printf (Constants.BITWARDEN_USER_AGENT, Constants.VERSION);
 
             valawarden_dir = GLib.Environment.get_user_data_dir () + "/valawarden/";
@@ -44,10 +44,10 @@ namespace App {
 
             var root_object = parser.get_root ().get_object ();
             ErrorObject error_object = check_login_response (root_object);
-            if (error_object.error != "") {
+            if (error_object.error != null) {
                 return error_object;
             }
-
+            
             if (root_object.has_member ("access_token")
                 && root_object.has_member ("refresh_token")
                 && root_object.has_member ("expires_in")
