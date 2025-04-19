@@ -69,6 +69,13 @@ namespace App.Views {
             } else {
                 this.add (main_panel);
             }
+
+            test();
+        }
+
+        private async void test () {
+            var bitwarden = App.Bitwarden.get_instance ();
+            yield bitwarden.download_icon ("github.com");
         }
 
         private async void on_login_clicked () {

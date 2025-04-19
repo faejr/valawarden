@@ -2,7 +2,7 @@ using App.Configs;
 using App.Models;
 using GCrypt;
 
-namespace App {
+namespace App.Utils {
     public class Crypto {
         // Modified from https://stackoverflow.com/a/9722957
         public static uint8[] hmac (ChecksumType type, uint8[] key, uint8[] data) {
@@ -118,6 +118,13 @@ namespace App {
             buffer[buffer.length - 1] = 0;
 
             return buffer;
+        }
+
+        public static string md5_string (string str) {
+            Checksum md5 = new Checksum (ChecksumType.MD5);
+            md5.update (str.data, str.data.length);
+
+            return md5.get_string ();
         }
     }
 }

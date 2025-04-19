@@ -1,5 +1,6 @@
 using App.Configs;
 using App.Models;
+using App.Utils;
 using GCrypt;
 
 namespace App {
@@ -118,7 +119,7 @@ namespace App {
         }
 
         public Json.Object ? sync () {
-            if (!check_internet_connectivity ()) {
+            if (!NetworkUtils.check_internet_connectivity ()) {
                 return get_sync_data ();
             }
             var settings = App.Configs.Settings.get_instance ();
@@ -269,23 +270,6 @@ namespace App {
             return Crypto.add_terminating_zero (Crypto.remove_padding (out_buffer));
         }
 
-        private bool check_internet_connectivity () {
-            Socket socket = new Socket (SocketFamily.IPV4, SocketType.STREAM, SocketProtocol.TCP);
-            assert (socket != null);
-
-            var googleAddress = new InetAddress.from_string ("8.8.8.8");
-            var googleDns = new InetSocketAddress (googleAddress, 53);
-
-            try {
-                socket.connect (googleDns);
-            } catch (GLib.Error e) {
-                return false;
-            }
-
-            socket.close ();
-            return true;
-        }
-
         private Json.Parser make_request (Soup.Message message) {
             session.send_message (message);
 
@@ -298,6 +282,30 @@ namespace App {
             }
 
             return parser;
+        }
+
+        public async uint8[] ? download_icon (string url) {
+            var icon_url = Constants.BITWARDEN_ICONS_URL + "/" + url + "/icon.png";
+
+            stdout.printf ("Looking for: %s\n", valawarden_dir + "icons/" + Crypto.md5_string (url) + ".png");
+            var icon_file = File.new_for_path (valawarden_dir + "icons/" + Crypto.md5_string (url) + ".png");
+            if (icon_file.query_exists ()) {
+                string etag;
+                var icon = yield icon_file.load_bytes_async (null, out etag);
+
+                // Check if icon is newer than 7 days
+                if (((GLib.get_real_time () / 1000000) - int64.parse (etag.split (":")[0])) / 1440000 < 7) {
+                    return icon.get_data ();
+                }
+            }
+
+            var message = new Soup.Message ("GET", icon_url);
+            var stream = yield session.send_async (message);
+            var data = yield Utils.IO.input_stream_to_array(stream);
+
+            yield icon_file.replace_contents_async(data, null, false, FileCreateFlags.NONE, null, null);
+
+            return data;
         }
 
         private static Bitwarden ? instance;
