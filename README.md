@@ -23,7 +23,7 @@
 </p>
 
 <p align="center">
-  ![Screenshot](data/images/screenshot.png)<br>
+  <img src="https://github.com/LiljebergXYZ/valawarden/raw/develop/data/images/screenshot.png" alt="Screenshot" />
   <a href="https://github.com/liljebergxyz/valawarden/issues/new"> Report a problem! </a>
 </p>
 
