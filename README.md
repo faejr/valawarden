@@ -1,7 +1,5 @@
 *(This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor 8bit Solutions LLC.)*
 
-![Icon](data/images/com.github.liljebergxyz.valawarden.png)
-
 <div align="center">
   <h1 align="center">Valawarden</h1>
   <h3 align="center">Unofficial native bitwarden client for elementary OS</h3>
@@ -28,7 +26,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/LiljebergXYZ/valawarden/raw/develop/data/images/screenshot.png" alt="Screenshot" />
+  <img src="https://github.com/LiljebergXYZ/valawarden/raw/develop/data/images/com.github.liljebergxyz.valawarden.png" alt="Icon" />
   <a href="https://github.com/liljebergxyz/valawarden/issues/new"> Report a problem! </a>
 </p>
 
