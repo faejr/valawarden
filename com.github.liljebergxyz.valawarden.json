@@ -1,0 +1,75 @@
+{
+    "app-id" : "com.github.liljebergxyz.valawarden",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "3.28",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "builder-test",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags" : "-O2 -g",
+        "cxxflags" : "-O2 -g",
+        "env" : {
+        }
+    },
+    "cleanup" : [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
+    "modules" : [
+        {
+            "name" : "libgee",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://git.gnome.org/browse/libgee.git"
+                }
+            ]
+        },
+        {
+            "name" : "granite",
+            "buildsystem" : "cmake",
+            "config-opts" : [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_INSTALL_PREFIX=/app",
+                "-DCMAKE_INSTALL_LIBDIR=/app/lib"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://github.com/elementary/granite.git"
+                }
+            ]
+        },
+        {
+            "name" : "Valawarden",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "--libdir=lib"
+            ],
+            "builddir" : true,
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "file:///home/daniel/dev/com.github.liljebergxyz.valawarden"
+                }
+            ]
+        }
+    ]
+}

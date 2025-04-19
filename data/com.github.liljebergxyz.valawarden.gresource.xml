@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+
+    <gresource prefix="/com/github/liljebergxyz/valawarden/css">
+        <file alias="style.css" compressed="true">css/style.css</file>
+    </gresource>
+
+    <gresource prefix="/com/github/liljebergxyz/valawarden/images">
+        <file alias="logo" compressed="true" preprocess="xml-stripblanks">images/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo16" compressed="true" preprocess="xml-stripblanks">images/icons/16/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo24" compressed="true" preprocess="xml-stripblanks">images/icons/24/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo32" compressed="true" preprocess="xml-stripblanks">images/icons/32/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo48" compressed="true" preprocess="xml-stripblanks">images/icons/48/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo64" compressed="true" preprocess="xml-stripblanks">images/icons/64/com.github.liljebergxyz.valawarden.svg</file>
+        <file alias="logo128" compressed="true" preprocess="xml-stripblanks">images/icons/128/com.github.liljebergxyz.valawarden.svg</file>
+    </gresource>
+</gresources>

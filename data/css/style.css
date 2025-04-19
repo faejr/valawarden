@@ -1,0 +1,58 @@
+/*
+* Copyright (C) 2018  Daniel Liljeberg <liljebergxyz@protonmail.com>
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+@define-color colorPrimary #3C8DBC;
+@define-color textColorPrimary #FFFFFF;
+@define-color textColorPrimaryShadow transparent;
+@define-color colorAccent #ABACAE;
+
+label.h3 {
+    font-weight: bold;
+}
+
+label.entry-name {
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
+entry.entry-name {
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+entry.entry-name:selected,
+entry.entry-name:hover,
+entry.entry-name:active,
+entry.entry-name:focus {
+    background-color: #FFFFFF;
+}
+
+grid.entry-grid {
+    border: 1px solid darkgray;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.code-label {
+    font-size: 20px;
+}
