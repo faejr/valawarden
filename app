@@ -3,7 +3,12 @@
 arg=$1
 
 function initialize {
-    meson build --prefix=/usr
+    system=$(uname -s)
+    prefix="/usr"
+    if [[ system == "Darwin" ]]; then
+        prefix="/usr/local"
+    fi
+    meson build --prefix=$prefix
     result=$?
 
     if [ $result -gt 0 ]; then

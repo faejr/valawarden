@@ -3,14 +3,14 @@ using App.Models;
 using GCrypt;
 
 namespace App {
-    public class Api {
+    public class Bitwarden {
         private const int TOTP_TFA_ID = 0;
         private Soup.SessionAsync session;
         private string valawarden_dir;
         private string sync_data_file = "sync-data.json";
         public uint8[] encryption_key;
 
-        public Api () {
+        public Bitwarden () {
             session = new Soup.SessionAsync ();
             session.user_agent = "%s/%s".printf (Constants.BITWARDEN_USER_AGENT, Constants.VERSION);
 
@@ -300,11 +300,11 @@ namespace App {
             return parser;
         }
 
-        private static Api ? instance;
+        private static Bitwarden ? instance;
 
-        public static unowned Api get_instance () {
+        public static unowned Bitwarden get_instance () {
             if (instance == null) {
-                instance = new Api ();
+                instance = new Bitwarden ();
             }
 
             return instance;

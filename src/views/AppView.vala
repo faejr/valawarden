@@ -50,7 +50,7 @@ namespace App.Views {
             child_panel.pack2 (CipherPage.get_instance (), true, false);
             main_panel.position = (150);
 
-            if (App.Api.get_instance ().encryption_key == null) {
+            if (App.Bitwarden.get_instance ().encryption_key == null) {
                 password_entry = new Gtk.Entry ();
                 password_entry.set_visibility (false);
                 login_button = new Gtk.Button.with_label (_ ("Unlock"));
@@ -72,8 +72,8 @@ namespace App.Views {
         }
 
         private async void on_login_clicked () {
-            var api = App.Api.get_instance ();
-            if (yield api.unlock (password_entry.text)) {
+            var bitwarden = App.Bitwarden.get_instance ();
+            if (yield bitwarden.unlock (password_entry.text)) {
                 this.remove (grid);
                 this.add (main_panel);
                 sidebar.setup_folders ();
