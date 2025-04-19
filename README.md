@@ -1,5 +1,6 @@
-*(This project is not associated with the [Bitwarden](https://bitwarden.com/) project nor 8bit Solutions LLC.)*
-
+<p align="center">
+<i>(This project is not associated with the <a href="https://bitwarden.com/" title="Bitwarden">Bitwarden</a> project nor 8bit Solutions LLC.)</i>
+</p>
 ![Logo](data/images/logotype.png)
 _Logo Artwork By [@richardbmx](https://github.com/richardbmx)_
 
